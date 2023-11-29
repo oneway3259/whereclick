@@ -1,0 +1,23 @@
+#showclickbtn{
+	position: absolute;
+	right: 5px;
+	bottom: 50%;
+
+}
+#showclickarea{
+	pointer-events: none;
+	width: 100%;
+	height: 100%;
+/*	position: relative;*/
+	z-index: 999;
+}
+
+#showclickarea i{
+	width: 2px;
+	height: 2px;
+	position: absolute;
+	z-index: 999;
+	background: #f00;
+	opacity:0.2;
+	 border-radius: 50%;
+}
