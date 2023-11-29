@@ -1,0 +1,42 @@
+{
+
+"manifest_version": 3,
+"version": "1.6",      
+"minimum_chrome_version" : "17.0.0",
+"web_accessible_resources": [{ 
+  "resources": ["whereclick.js","jq.js"],
+    "matches": ["<all_urls>"]
+}],
+"name": "whereclick",
+
+  "description": "我都点哪里了?",
+
+
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "contextMenus",
+    "sessions",
+    "storage",
+    "tabs", 
+    "activeTab",
+    "http://*/*", 
+    "https://*/*"
+  ],
+"background": {
+    "service worker":"background.js"
+    },
+"content_scripts": [
+
+{
+
+"matches": ["<all_urls>"],
+
+"css": ["dark.css"], 
+"js": ["jq.js","whereclick.js"], 
+   "run_at": "document_end"
+}
+
+]
+
+}
